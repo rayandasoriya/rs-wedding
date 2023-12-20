@@ -14,6 +14,8 @@ const storage = new Storage({
     keyFilename: process.env.GCS_KEYFILE || 'snapin-f6ff4f740c0e.json',
 });
 
+console.log(storage.keyFilename)
+
 const bucket = storage.bucket('rd-wedding-photos-test');
 
 // Serve static files from the 'public' directory
@@ -55,7 +57,7 @@ app.post('/upload', upload.array('photos', 5), (req, res) => {
         })
         .catch((err) => {
             console.error(err);
-            res.status(500).send('Error uploading files to Google Cloud Storage.');
+            res.redirect('/?alert=failure');
         });
 });
 

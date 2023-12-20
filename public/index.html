@@ -9,7 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-
       font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
       background-color: #ffffff;
       display: flex;
@@ -33,24 +32,31 @@
       border-radius: 4px;
       cursor: pointer;
     }
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="mt-5 mb-4 text-center">Welcome to the weeding of Rayan and Shruti</h1>
+    <h1 class="mt-5 mb-4 text-center">Welcome to the wedding of</h1>
+    <h1 class="text-center"> Rayan and Shruti</h1>
 
     <!-- Display an alert based on the query parameter -->
     <div id="alertContainer"></div>
 
     <form action="/upload" method="post" enctype="multipart/form-data" class="mb-4">
       <div class="mb-3">
-        <img src="logo.jpeg" width="300" height="300" />
-        <br>
-        <label for="photo" class="form-label">Choose photos</label>
-        <input type="file" class="form-control" id="photos" name="photos" accept="image/*" multiple required>
+        <br><br><br>
+        <h4 for="photo" class="form-label center">Please upload your wedding photos for the bride and groom.</h4>
+        <img src="logo.jpeg" width="300" height="300" class="center" />
+        
+        <input type="file" class="form-control center" id="photos" name="photos" accept="image/*" multiple required>
       </div>
-      <button type="submit" class="btn btn-primary">Upload</button>
+      <button type="submit" class="btn btn-primary center">Upload</button>
     </form>
   </div>
 

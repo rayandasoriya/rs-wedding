@@ -11,7 +11,7 @@ const upload = multer({ storage: multerStorage });
 // Google Cloud Storage configuration
 const storage = new Storage({
     projectId: 'snapin',
-    keyFilename: process.env.GCS_KEYFILE || 'snapin-f6ff4f740c0e.json',
+    keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS || '../snapin-f6ff4f740c0e.json',
 });
 
 console.log(storage.keyFilename)

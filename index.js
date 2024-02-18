@@ -22,7 +22,7 @@ const bucket = storage.bucket('rd-wedding-photos-test');
 app.use(express.static('public'));
 
 // Define the route for uploading multiple photos
-app.post('/upload', upload.array('photos', 5), (req, res) => {
+app.post('/upload', upload.array('photos', 50), (req, res) => {
     const files = req.files;
 
     if (!files || files.length === 0) {
